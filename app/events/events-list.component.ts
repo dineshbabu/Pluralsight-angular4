@@ -7,7 +7,7 @@ import { Component } from '@angular/core'
         <h1>Upcoming Angular 2 events</h1>
         <hr>    
         // (eventClick) is the Output property delcared in Child component
-        <event-thumbnail (eventClick)="handleEventClicked($event)" [event] = event1 > </event-thumbnail>
+        <event-thumbnail [event] = event1 > </event-thumbnail>
     </div>
     `
 })
@@ -24,9 +24,5 @@ export class EventsListComponent{
           city: 'London',
           country: 'England'
         },
-    }
-
-    handleEventClicked(data){
-        console.log('received data : '+ data)
     }
 }
