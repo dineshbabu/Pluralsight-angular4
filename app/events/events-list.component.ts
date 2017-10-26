@@ -6,7 +6,11 @@ import { Component } from '@angular/core'
     <div>
         <h1>Upcoming Angular 2 events</h1>
         <hr> 
-        <event-thumbnail *ngFor="let eventDetails of events"  [event] = eventDetails > </event-thumbnail>
+        <div class="row">
+            <div *ngFor="let eventDetails of events" class="col-md-5">
+                <event-thumbnail [event] = eventDetails > </event-thumbnail>
+            </div>
+        </div>
     </div>
     `
 })
