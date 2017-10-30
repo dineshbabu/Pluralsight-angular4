@@ -9,7 +9,7 @@ import { EventService } from './shared/event-service'
         <hr> 
         <div class="row">
             <div *ngFor="let eventDetails of events" class="col-md-5">
-                <event-thumbnail [event] = eventDetails > </event-thumbnail>
+                <event-thumbnail (click)="handleThumbNailClick(eventDetails.name)" [event] = eventDetails > </event-thumbnail>
             </div>
         </div>
     </div>
@@ -23,5 +23,9 @@ export class EventsListComponent implements OnInit {
 
     ngOnInit(){
       this.events = this.eventService.getEvents()
+    }
+
+    handleThumbNailClick(eventName){
+      toastr.success(eventName)
     }
 }
