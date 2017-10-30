@@ -8,7 +8,7 @@ import { EventService } from '../shared/event-service'
         .event-image {height: 100px;}
     `]
 })
-export class EventDetails implements OnInit{
+export class EventDetailsComponent implements OnInit{
     event: any
 
     constructor(private eventService: EventService){
