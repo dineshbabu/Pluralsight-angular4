@@ -5,7 +5,7 @@ import { Subject } from 'rxjs/RX'
 export class EventService{
     getEvents(){
       let subject = new Subject()
-      setTimeout( () => { subject.next(EVENTS); subject.complete(); }, 2000 )
+      setTimeout( () => { subject.next(EVENTS); subject.complete(); }, 100 )
       return subject
     }
 
