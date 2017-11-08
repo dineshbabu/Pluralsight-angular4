@@ -4,5 +4,7 @@ import { Component } from '@angular/core'
     templateUrl: 'app/user/login.component.html'
 })
 export class LoginComponent{
-    
+    login(formValues){
+        console.log(formValues)
+    }
 }
